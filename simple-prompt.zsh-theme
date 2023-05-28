@@ -61,8 +61,8 @@ function separator() {
   # The ${COLUMNS:-$(tput cols)} expression is used to determine the width of the terminal window.
   # The COLUMNS variable is set by the shell to the number of columns in the terminal window, and the tput cols command retrieves the number of columns in the terminal window. The :- operator is used to set a default value for the COLUMNS variable if it is not set. In this case, the default value is the output of the tput cols command, which retrieves the number of columns in the terminal window.
   # the tr command is used to replace all spaces in the input string with -
-  separation_line=$(tput setaf 0; printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -)
-  echo "${separation_line}"
+  # separation_line=$(tput setaf 0; printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -)
+  # echo "${separation_line}"
 }
 
 function precmd() {
